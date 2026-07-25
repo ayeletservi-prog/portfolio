@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Retention Dashboard — Ayelet Servi" />
+  <title>Retention Dashboard — Ayelet Servi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F6F6B'/%3E%3Ctext x='16' y='22' font-family='Arial, sans-serif' font-size='15' font-weight='700' fill='%23F9F6F1' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ayelet Servi" />
+  <meta property="og:title" content="Retention Dashboard — Ayelet Servi" />
+  <meta property="og:description" content="Designing a data-rich dashboard for monitoring retention policies across media types, with trend analysis and filtering capabilities for compliance teams." />
+  <meta property="og:image" content="../images/Retention%20dashboard/Retention%20dashboard%20-%20general.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="../index.html" class="nav-logo">Ayelet Servi</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="../index.html#work"    class="nav-link">Selected projects</a></li>
+        <li><a href="../index.html#about"   class="nav-link">About me</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="cs-hero">
+      <div class="container">
+        <a href="../index.html#work" class="back-link">← Back to selected projects</a>
+        <div class="cs-meta-row">
+          <span class="tag">Dashboard</span>
+          <span class="tag">Verint</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+        <h1 class="cs-title">Retention Dashboard</h1>
+        <p class="cs-subtitle">Designing a data-rich dashboard for monitoring retention policies across media types, with trend analysis and filtering capabilities for compliance teams.</p>
+        <div class="cs-overview">
+          <h2 class="cs-overview__heading">Overview</h2>
+          <p class="cs-overview__text">The design aims to give tenants a self-service window into their interaction storage — visibility into how it's being archived and deleted, and forecasting to plan future needs — without requiring Verint involvement. The dashboard organizes storage information into layers, from a high-level health check down to granular detail by data type and line of business, letting administrators monitor trends and understand usage on their own.</p>        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <h2>The Problem</h2>
+        <p>
+          Tenants had no visibility into how their recorded interactions were stored, archived, or deleted. They couldn't tell whether archiving was working correctly, whether expired calls were being purged as expected, or how much storage they would need in the future.
+        </p>
+        <p>
+          The goal was to give tenants a self-service window into their storage — to monitor its health, understand usage trends, and forecast future needs, all without Verint involvement.
+        </p>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">01</span>
+          <h2>Understanding the Needs</h2>
+        </div>
+        <p>
+          Two core user needs shaped the design direction:
+        </p>
+        <ul class="cs-insights">
+          <li><strong>Visibility</strong> — tenants need to see the current state of their storage: what is being archived, what is expiring, and whether deletions are happening as configured.</li>
+          <li><strong>Forecasting</strong> — based on historical data, tenants want to predict future storage requirements so they can plan ahead and avoid surprises.</li>
+        </ul>
+        <p style="margin-top: 2rem;">
+          A third need, <strong>control</strong> — the ability to extend or reduce archival duration per line of business, without depending on Verint services — was identified but fell outside the scope of this phase.
+        </p>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section cs-section--alt">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">02</span>
+          <h2>Ideation &amp; Design</h2>
+        </div>
+        <p>
+          The design organizes storage information into layers: an overall, tenant-wide summary at the top, with the option to drill down per organization or per data type. At every level, administrators can see historical usage data alongside a trend line.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Retention%20dashboard/Retention%20dashboard%20-%20by%20media%20type.png"
+            alt="Retention Dashboard — breakdown by media type"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Storage broken down by data type — calls, screens, and other interaction types — giving administrators a clear picture of what is driving usage.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Retention%20dashboard/Retention%20dashboard%20-%20table%20view.png"
+            alt="Retention Dashboard — table view with per-LOB detail"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Table view providing granular retention data per organization — including archived volume, configured duration, and expiry status.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Retention%20dashboard/Retention%20dashboard%20-%20expanded1.png"
+            alt="Retention Dashboard — expanded line of business view"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Expanded view of the top widget. Both the top and bottom widgets can be expanded, letting administrators view the data more comfortably.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Retention%20dashboard/Retention%20dashboard%20-%20Overall%20data%20line.png"
+            alt="Retention Dashboard — overall data trend line"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The overall data line showing storage usage over time, with the y-axis scaling dynamically.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Retention%20dashboard/Retention%20dashboard%20-%20trend%20line.png"
+            alt="Retention Dashboard — data over time with projected trend line"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>A trend line layered over per-organization usage data, helping administrators project future usage for a specific organization.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Retention%20dashboard/Retention%20dashboard%20-%20filtered.png"
+            alt="Retention Dashboard — filtered by line of business"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Filtering the dashboard by organization — allowing administrators to focus on the specific segment they're responsible for.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">03</span>
+          <h2>Outcome &amp; Impact</h2>
+        </div>
+        <p>
+          As of July 2026, this project has not been implemented. Once live, the dashboard is expected to give tenants something they've never had before: a complete, self-service view of their storage health. Administrators would be able to verify that archiving and deletion are working as expected, and anticipate capacity needs from trend data — all without submitting a support request to Verint.
+        </p>
+      </div>
+    </section>
+
+    <nav class="cs-project-nav" aria-label="Project navigation">
+      <a href="capture-rules.html" class="cs-project-nav__back">
+        <span>Previous project</span>
+        <strong>← Capture Rules</strong>
+      </a>
+      <a href="cogito-integration.html" class="cs-project-nav__next">
+        <span>Next project</span>
+        <strong>Cogito Integration →</strong>
+      </a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Ayelet Servi</p>
+      <p class="footer-copy">© <span class="footer-year"></span></p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:ayelet.servi@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/ayelet-servi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

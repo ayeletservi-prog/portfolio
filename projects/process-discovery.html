@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Process Intelligence — Ayelet Servi" />
+  <title>Process Intelligence — Ayelet Servi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F6F6B'/%3E%3Ctext x='16' y='22' font-family='Arial, sans-serif' font-size='15' font-weight='700' fill='%23F9F6F1' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ayelet Servi" />
+  <meta property="og:title" content="Process Intelligence — Ayelet Servi" />
+  <meta property="og:description" content="Designed an AI-assisted experience that discovers how work actually happens, surfaces process variants for analyst review, and recommends optimized workflows — with ongoing monitoring of confirmed processes as they continue to evolve." />
+  <meta property="og:image" content="../images/Process%20discovery/Discovered%20tasks%20-%20General%20flow.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="../index.html" class="nav-logo">Ayelet Servi</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="../index.html#work"    class="nav-link">Selected projects</a></li>
+        <li><a href="../index.html#about"   class="nav-link">About me</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="cs-hero">
+      <div class="container">
+        <a href="../index.html#work" class="back-link">← Back to selected projects</a>
+        <div class="cs-meta-row">
+          <span class="tag">Enterprise Web</span>
+          <span class="tag">Verint</span>
+          <span class="tag">Process Mining</span>
+        </div>
+        <h1 class="cs-title">Process Intelligence</h1>
+        <p class="cs-subtitle">Designed an AI-assisted experience that discovers how work actually happens, surfaces process variants for analyst review, and recommends optimized workflows — with ongoing monitoring of confirmed processes as they continue to evolve.</p>
+        <div class="cs-overview">
+          <h2 class="cs-overview__heading">Overview</h2>
+          <p class="cs-overview__text">This project turned passive desktop observation into a trustworthy map of how work actually happens, giving analysts a human review layer to validate AI-discovered processes before they drive downstream decisions — from surfacing variants for review, to recommending optimized workflows, to ongoing monitoring of confirmed processes as they evolve.</p>        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <h2>The Problem</h2>
+        <p>
+          Documented processes rarely match how work actually happens. To improve a workflow — or even know it needs improving — an organization first needs an accurate, current picture of what employees are really doing, across teams and variations, without relying on interviews or diagrams that go stale the moment anything changes.
+        </p>
+        <p>
+          A bot addresses the first half of that problem by passively observing employee desktop activity and detecting recurring sequences of actions. Once a sequence has enough repeated observations for the bot to be confident it represents a genuine process, it's surfaced as a candidate. But automated detection is necessarily noisy: not every candidate is really one coherent process, and not every variant the bot groups under it actually belongs there. The system needed a human review layer an analyst could trust, before any of this data was used to drive decisions or optimizations.
+        </p>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">01</span>
+          <h2>Understanding the Needs</h2>
+        </div>
+        <p>
+          I started by mapping the full lifecycle a candidate process moves through — from raw, unvalidated observations, to a discovered process once the bot's confidence crosses a threshold, through analyst review, to a confirmed process that keeps accumulating data indefinitely. Designing for this meant designing for two different moments: an analyst doing first-pass triage on something new, and an analyst — or someone else entirely — later monitoring something already confirmed.
+        </p>
+        <p>
+          For the discovery phase specifically, I worked out what an analyst actually needs in order to triage a new candidate:
+        </p>
+        <ul class="cs-insights">
+          <li><strong>Is this really one coherent process?</strong> — an analyst needs to judge whether a bot-discovered candidate genuinely represents a real process, correctly described across all its variants.</li>
+          <li><strong>Does every variant belong?</strong> — an analyst needs to confirm that every variant displayed for a process actually belongs to it.</li>
+        </ul>
+        <p style="margin-top: 2rem;">
+          That meant giving every discovered process three views at three altitudes — a flow diagram of the whole process, a breakdown of its individual variants, and the raw observation log behind all of it — so an analyst could move from the big picture down to hard evidence without ever leaving the page.
+        </p>
+        <p style="margin-top: 2rem;">
+          Once a process is confirmed, the needs shift to ongoing monitoring:
+        </p>
+        <ul class="cs-insights">
+          <li><strong>Is it still running correctly?</strong> — users need a continuous stream of data on a confirmed process to confirm it's performing as expected and catch any anomalies.</li>
+          <li><strong>Can it be improved?</strong> — users need a way to check whether there's an opportunity to further optimize a confirmed process.</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section cs-section--alt">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">02</span>
+          <h2>Ideation &amp; Design</h2>
+        </div>
+        <p>
+          Triage starts at the Discovered Processes table, where every candidate the bot has surfaced is listed side by side, before an analyst opens any single one of them.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Discovered%20tasks%20table.png"
+            alt="Discovered Processes table, ranked by classification confidence"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Every discovered process is ranked by the bot's classification confidence — an analyst's starting point for deciding what to review first.</figcaption>
+        </figure>
+        <p>
+          Opening a process from that table drills into its dedicated view, made up of three tabs that each show the process from a different angle — starting with its general flow.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Discovered%20tasks%20-%20General%20flow.png"
+            alt="General flow diagram for a discovered process"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The General flow view for a discovered process — a top-level flow diagram giving an analyst the big picture before drilling into variants or raw observations.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Discovered%20tasks%20-%20Variants%20-%20Standard%20path%20variant.png"
+            alt="Variants view showing the standard path variant"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The Variants view, with the standard (top) path selected — its diagram, AI summary, and observation count shown alongside the other variants for comparison.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Discovered%20tasks%20-%20Variants%20-%20Another%20variant%20-%20Observations.png"
+            alt="Observations tab within a variant's view"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>A variant's view also surfaces the raw observations specific to it.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Expanded%20diagram%20and%20table%20area.png"
+            alt="Diagram and observations table expanded into a popup"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Since the space allotted to the diagram and the observations table can fall short, I added the option to expand either one into a popup.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Discovered%20tasks%20-%20Total%20observations.png"
+            alt="Total observations table behind a discovered process"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The ground truth behind every process and variant: a log of the individual observations the bot used to detect it. This tab lets users check for observations with extreme values, and from it they can dive into any observation to understand exactly what happened there.</figcaption>
+        </figure>
+        <p>
+          A user can confirm a process, or flag it — flagging sends it to the Flagged Processes table, where the services team takes the handling from there. The same principle applies to variants, which can be flagged the same way. I originally wanted users to be able to close these loops themselves — for example, reassigning a variant that actually belonged to a different process, or marking one as not real so the bot could continue from there — but that wasn't technically feasible in the MVP's first phase, so we went with the simpler flagging flow instead.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Discovered%20processes%20-%20Flag%20process%20confirmation%20message.png"
+            alt="Flag process for follow-up confirmation dialog"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Flagging always requires a reason — giving the services team triaging the follow-up queue real context instead of an unexplained rejection.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Tasks%20for%20follow-up%20table.png"
+            alt="Processes flagged for follow-up table"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Processes and variants an analyst has flagged, with their reason, sent to a dedicated queue for the services team to action.</figcaption>
+        </figure>
+        <p>
+          Once a process is confirmed, it moves to the Confirmed Processes table, where its page gains two more tabs, turning it from a one-time triage screen into an ongoing monitoring tool: a Dashboard, and an AI variants optimization tab that proposes improved versions of specific variants as a current-vs-optimized comparison, with plain-language reasoning the analyst can accept or reject. New suggestions surface proactively as a notification, rather than requiring anyone to go looking for them.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Confirmed%20tasks%20table.png"
+            alt="Confirmed processes table"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Confirmed processes continue to accumulate data over time rather than being a one-time snapshot.</figcaption>
+        </figure>
+        <p>
+          Confirmed processes don't stop accumulating data once they're confirmed — they keep gathering observations and surfacing new optimization opportunities over time, so the system gets more useful the longer it runs rather than going stale the way a one-time process-mapping exercise would.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Confirmed%20tasks%20-%20Dashboard.png"
+            alt="Dashboard tab for a confirmed process"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The Dashboard tab was designed to be built in Verint DI (Data Insights), the platform's dedicated dashboard-building system, and embedded here rather than built from scratch for this feature — it wasn't yet built as part of the MVP.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Confirmed%20tasks%20-%20AI%20variants%20optimization%20-%20diagram%20view%201.png"
+            alt="AI variant optimization shown as a current vs. optimized diagram comparison"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>An AI-suggested optimization shown as a direct current-vs-optimized comparison, with time saved, steps reduced, and overall gain called out alongside the reasoning — so an analyst can accept or reject it with full context.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Process%20discovery/Confirmed%20tasks%20-%20AI%20variants%20optimization%20-%20list%20view.png"
+            alt="AI variant optimization shown as a current vs. optimized list view"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The same comparison in list view, letting an analyst read the description of each step more easily. Both the diagram and list views can also be expanded into a popup for more room.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">03</span>
+          <h2>Outcome &amp; Impact</h2>
+        </div>
+        <p>
+          Process Intelligence is not yet in general availability, but was unveiled at Verint Engage — the premier annual conference for customer experience and contact center professionals — where it generated significant interest from customers. The feature's first exposure to a real audience validated both the concept and the design direction.
+        </p>
+      </div>
+    </section>
+
+    <nav class="cs-project-nav" aria-label="Project navigation">
+      <a href="../index.html#work" class="cs-project-nav__back">
+        <span>Back to</span>
+        <strong>← All projects</strong>
+      </a>
+      <a href="compliance-app.html" class="cs-project-nav__next">
+        <span>Next project</span>
+        <strong>Compliance App →</strong>
+      </a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Ayelet Servi</p>
+      <p class="footer-copy">© <span class="footer-year"></span></p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:ayelet.servi@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/ayelet-servi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

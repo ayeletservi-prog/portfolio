@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compliance app — Ayelet Servi" />
+  <title>Compliance app — Ayelet Servi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F6F6B'/%3E%3Ctext x='16' y='22' font-family='Arial, sans-serif' font-size='15' font-weight='700' fill='%23F9F6F1' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ayelet Servi" />
+  <meta property="og:title" content="Compliance app — Ayelet Servi" />
+  <meta property="og:description" content="Modernizing a compliance review platform and introducing AI-powered risk detection — so compliance teams could go from sampling a fraction of calls to reviewing what actually matters." />
+  <meta property="og:image" content="../images/VFC/Summary.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="../index.html" class="nav-logo">Ayelet Servi</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="../index.html#work"    class="nav-link">Selected projects</a></li>
+        <li><a href="../index.html#about"   class="nav-link">About me</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="cs-hero">
+      <div class="container">
+        <a href="../index.html#work" class="back-link">← Back to selected projects</a>
+        <div class="cs-meta-row">
+          <span class="tag">Enterprise Web</span>
+          <span class="tag">Verint</span>
+          <span class="tag tag--ai">AI Integration</span>
+        </div>
+        <h1 class="cs-title">Compliance App</h1>
+        <p class="cs-subtitle">Modernizing a compliance review platform and introducing AI-powered risk detection — so compliance teams could go from sampling a fraction of calls to reviewing what actually matters.</p>
+        <div class="cs-overview">
+          <h2 class="cs-overview__heading">Overview</h2>
+          <p class="cs-overview__text">This project modernized a seven-year-old compliance review platform — as close to Verint's LUX design system as the existing technical infrastructure allowed — and introduced AI-powered risk detection, letting compliance teams move from manually sampling a fraction of calls to systematically reviewing what actually matters, across three distinct personas: IT administrators, Compliance Officers, and Wealth Management Supervisors.</p>        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <h2>The Problem</h2>
+        <p>
+          The Compliance App had been running on the same UX foundation for nearly seven years. The interface had grown difficult to navigate, and the visual design was out of step with Verint's evolving LUX design system. At the same time, the product was preparing to launch a significant new capability: AI-powered risk detection (VFC Bots) that would automatically flag compliance risks in call recordings.
+        </p>
+        <p>
+          The work split into two parallel streams. The first was a focused UI refresh. The existing technical infrastructure ruled out a full migration to Verint's new LUX design system, so the work focused on bringing the experience as close to a LUX look and feel as possible, while resolving accumulated usability debt. The second was a new design challenge: surfacing AI-generated risk signals in a way that compliance reviewers could act on quickly, without overwhelming them or undermining their trust in the AI.
+        </p>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">01</span>
+          <h2>Understanding the Needs</h2>
+        </div>
+        <p>
+          The starting point was auditing the existing product — a UI that had been substantially unchanged for nearly seven years. Dense waveforms, utilitarian tables, and analytics panels bolted on over time made even core tasks, like reviewing a call's participants or adding a marker, feel more effortful than they needed to be.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/Old%20VFC%201.png"
+            alt="Compliance App — legacy conversation review screen with waveform, transcript, and analytics panels"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The legacy conversation review screen — a dense waveform, transcript, and bolted-on analytics panels with little visual hierarchy to guide a reviewer's eye.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/Old%20VFC2.png"
+            alt="Compliance App — legacy conversation view with markers and participants panels"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The legacy markers and conversation details experience — functional, but visually utilitarian, with key information buried across the system.</figcaption>
+        </figure>
+        <p>
+          Three distinct user personas shaped the design, each with fundamentally different relationships to the product:
+        </p>
+        <ul class="cs-insights">
+          <li><strong>IT administrators</strong> — responsible for locating specific call recordings, often spending hours searching before they could hand a call off to the compliance team. Search and filtering were their primary pain point.</li>
+          <li><strong>Compliance Officers</strong> — a largely untapped user base who rarely logged into VFC at all, relying on IT to export calls for them instead. A core goal was to give them enough reason to log in directly and engage with the product regularly — getting up to speed quickly, listening to the relevant section of a recording, annotating their findings, and moving on, without context-switching to other tools.</li>
+          <li><strong>Wealth Management Supervisors</strong> — had historically relied on manual sampling: pulling a small number of calls into Excel spreadsheets each week and reviewing them by hand. The AI integration was a direct replacement for this workflow, and the design had to earn their trust in the system's triage decisions.</li>
+        </ul>
+        <p style="margin-top: 2rem;">
+          Two specific pain points emerged from the audit:
+        </p>
+        <ul class="cs-insights">
+          <li><strong>Buried orientation data</strong> — the key questions a reviewer needs answered the moment they open a call — who was on it, what type of interaction it was, was it flagged for risk, when it occurred, and how it was handled — were scattered across tabs and pop-ups. Getting a basic picture required multiple clicks before review could even begin.</li>
+          <li><strong>No AI assistance anywhere in the system</strong> — neither the search grid nor the interaction page had any intelligence layer. Reviewers had no way to identify high-risk moments without listening to the full recording.</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section cs-section--alt">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">02</span>
+          <h2>Ideation &amp; Design</h2>
+        </div>
+        <p>
+          This LUX-inspired refresh tackled interaction patterns, component consistency, and visual hierarchy across the existing screens, within the limits of what the underlying technical infrastructure could support. The two core usability problems required more deliberate solutions.
+        </p>
+        <p>
+          The first priority was immediate orientation. The redesigned interaction page surfaces key metadata the moment it opens — date, time, duration, user, source and destination numbers, and platform — shown as labeled icons across the top of the screen and readable before pressing play. Associated labels and case links appear just below. Information that had been scattered across the page was reorganized into clearly structured tabs, with the tabs themselves repositioned and reordered for a more logical flow. A prominent "Has Risk" indicator at the top of the interaction page gives reviewers an immediate signal before the recording starts.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/Metadata.png"
+            alt="Compliance App — enhanced metadata display"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The redesigned Conversation view, with key metadata surfaced up top and secondary information reorganized into clearly structured tabs.</figcaption>
+        </figure>
+        <p>
+          An AI Summary tab was also added, summarizing the transcription for the user. This lets a reviewer understand what happened faster, without having to listen to the entire interaction or read its transcription.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/Summary.png"
+            alt="Compliance App — AI Summary tab"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The AI Summary tab — giving reviewers a quick understanding of what happened on a call without listening to the full recording or reading the transcript.</figcaption>
+        </figure>
+        <p>
+          Another use of AI was in automating risk markers. In the legacy system, markers on the call timeline had to be placed manually by the compliance officer while reviewing a call. In the new design, the AI does this automatically: a dedicated AI Markers tab lists every risk marker the AI detected, including the specific content that triggered it — a transcript excerpt, a detected topic, a flagged phrase. These markers are also shown directly on the call timeline, letting compliance officers see the density and location of flagged moments at a glance without any manual work.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/AI%20Risk%20markers.png"
+            alt="Compliance App — AI Risk markers on the call timeline"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>AI-generated risk markers placed on the call timeline, with the full detail behind each one available in the AI Markers tab — allowing reviewers to navigate directly to flagged moments rather than listening to the full recording.</figcaption>
+        </figure>
+        <p>
+          A few more things were added to help the user. A dedicated Review tab was added to the interaction page, letting officers add their own comments as well as their own risk markers, without navigating away.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/Review.png"
+            alt="Compliance App — Compliance review interface with inline comment on hover"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Inline annotation in the compliance review surface — officers can document their findings at the exact moment in the call, and add their own manual markers, without switching to another tool.</figcaption>
+        </figure>
+        <p>
+          The participants tab gives compliance officers an immediate overview of who was on a call — a critical first step in any compliance investigation.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/Participants.png"
+            alt="Compliance App — Participants view"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The Participants view.</figcaption>
+        </figure>
+        <p>
+          Participant join and leave events are shown directly on the call timeline, giving compliance officers a clear picture of who was present at any given moment in the recording.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/Player%20with%20joined%20and%20left%20indications%20-%20Hover.png"
+            alt="Compliance App — Interaction page with participant join and leave indicators on hover"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Join and leave indicators shown on hover.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/VFC/Player%20with%20joined%20and%20left%20indications%20-%20Click.png"
+            alt="Compliance App — Interaction page with participant join and leave indicators on click"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Clicking an indicator reveals further detail.</figcaption>
+        </figure>
+        <p>
+          The search grid also received a visual refresh, though not through new screens: I provided UX guidance directly on the existing screens, and a UI designer translated that into direct guidance for developers — so that work isn't shown here.
+        </p>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">03</span>
+          <h2>Outcome &amp; Impact</h2>
+        </div>
+        <p>
+          Feedback from users has been overwhelmingly positive.
+        </p>
+        <p>
+          From a design and commercial standpoint, the response from sales channels has been strong. The old UI had become a barrier to sale — visually dated and out of step with what buyers expect from a modern product. The redesigned interface is now used in marketing materials and is the screen the demo team opens on at trade shows and events.
+        </p>
+        <p>
+          From a user standpoint, the redesign hit the problem areas directly. Reviewers can now immediately see who was on a call, what devices they communicated on, and when it took place. For licensed users, AI summaries answer what the call was about, and the Conduct Risk indicator flags whether it's worth a closer look. Across the board, it's a marked improvement over the legacy experience.
+        </p>
+        <p>
+          On scale: before the AI integration, compliance teams were reviewing a small random sample — less than a tenth of a percent of calls. With AI triage surfacing the interactions most likely to contain risk, teams can now focus where it matters, moving compliance coverage closer to the full call volume rather than a fixed sample.
+        </p>
+      </div>
+    </section>
+
+    <nav class="cs-project-nav" aria-label="Project navigation">
+      <a href="process-discovery.html" class="cs-project-nav__back">
+        <span>Previous project</span>
+        <strong>← Process Intelligence</strong>
+      </a>
+      <a href="capture-rules.html" class="cs-project-nav__next">
+        <span>Next project</span>
+        <strong>Capture Rules →</strong>
+      </a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Ayelet Servi</p>
+      <p class="footer-copy">© <span class="footer-year"></span></p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:ayelet.servi@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/ayelet-servi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

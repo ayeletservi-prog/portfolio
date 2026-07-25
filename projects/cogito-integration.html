@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conversation &amp; Behavior Analytics — Ayelet Servi" />
+  <title>Conversation &amp; Behavior Analytics — Ayelet Servi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F6F6B'/%3E%3Ctext x='16' y='22' font-family='Arial, sans-serif' font-size='15' font-weight='700' fill='%23F9F6F1' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ayelet Servi" />
+  <meta property="og:title" content="Conversation &amp; Behavior Analytics — Ayelet Servi" />
+  <meta property="og:description" content="Embedding two new AI intelligence layers — conversation topic detection and real-time behavior signals — directly into the existing interaction review workflow." />
+  <meta property="og:image" content="../images/Cogito%20integration/Cogito%20integration%20-%20Behavior%20AI%20cues%20on%20transcription.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="../index.html" class="nav-logo">Ayelet Servi</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="../index.html#work"    class="nav-link">Selected projects</a></li>
+        <li><a href="../index.html#about"   class="nav-link">About me</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="cs-hero">
+      <div class="container">
+        <a href="../index.html#work" class="back-link">← Back to selected projects</a>
+        <div class="cs-meta-row">
+          <span class="tag tag--ai">AI Integration</span>
+          <span class="tag">Verint</span>
+          <span class="tag">Interaction Design</span>
+        </div>
+        <h1 class="cs-title">Conversation &amp; Behavior Analytics</h1>
+        <p class="cs-subtitle">Embedding two new AI intelligence layers — conversation topic detection and real-time behavior signals — directly into the existing interaction review workflow.</p>
+        <div class="cs-overview">
+          <h2 class="cs-overview__heading">Overview</h2>
+          <p class="cs-overview__text">Two new forms of AI intelligence — conversation topic detection and real-time behavior signals — were surfaced across the table view, Tags tab, player, and call transcription, enabling managers to triage and coach directly from AI-surfaced insights rather than uncovering them through manual review.</p>        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <h2>The Problem</h2>
+        <p>
+          The existing interaction review system already surfaced conversation categories in a limited form, but nothing captured agent behavior in the moment it happened. Quality managers and supervisors still had to listen to calls manually to find coaching moments, identify patterns, or verify that agents were following expected practices. This didn't scale.
+        </p>
+        <p>
+          Verint's acquisition of a new AI capability introduced an improved conversation detection engine (identifying which topics or language categories appeared in an interaction) alongside an entirely new type of intelligence: behavior detection (tracking agent behaviors in real time, alerting agents when a behavior was flagged, and recording whether they self-corrected afterward). The real-time alerting itself was outside the design scope; the challenge was surfacing both types of intelligence within the post-call review interface — where supervisors and other reviewers examine what happened during an interaction — without overwhelming users who were already navigating complex workflows.
+        </p>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">01</span>
+          <h2>Understanding the Needs</h2>
+        </div>
+        <p>
+          The two AI systems had fundamentally different natures, and that difference shaped everything about how they needed to be presented.
+        </p>
+        <ul class="cs-insights">
+          <li><strong>Conversation AI (CAI)</strong> detects words and phrases that belong to predefined categories — flagging, for example, that a competitor was mentioned, or that compliance-relevant language appeared. These are static linguistic markers: a word was used, or it wasn't.</li>
+          <li><strong>Behavior AI (BAI)</strong> tracks agent behavior in real time during the call. It detects behavioral patterns, alerts the agent mid-call if a behavior is flagged, and records whether the agent corrected themselves afterward. For reviewers looking at this data after the fact, BAI tells a story with three distinct phases: the system detected something, the agent was alerted, and then — or not — the behavior changed, and how long it took the agent to change it.</li>
+        </ul>
+        <p style="margin-top: 2rem;">
+          Users needed to work with both types of data at two levels: the table view, where managers scan and triage calls in bulk, and the interaction detail view, where reviewers investigate a single call in depth.
+        </p>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section cs-section--alt">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">02</span>
+          <h2>Ideation &amp; Design</h2>
+        </div>
+        <p>
+          The design extended three existing surfaces without rebuilding them. Each surface served a different level of detail, and the AI data was introduced at the appropriate depth in each.
+        </p>
+        <p>
+          In the <strong>table view</strong>, CAI and BAI counts were added as columns alongside BAI category scores, with corresponding filter controls — giving managers a way to sort and prioritize calls based on AI signals before opening any of them.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Cogito%20integration/Cogito%20integration%20-%20Search%20results.png"
+            alt="Interaction list showing Conversation AI and Behavior AI data columns"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The interaction list with AI data surfaced as columns — CAI and BAI counts, behavioral scores, and filter controls — so managers can triage and prioritize calls before opening them.</figcaption>
+        </figure>
+        <p>
+          Within the interaction detail screen, the <strong>Tags tab</strong> was extended to include CAI and BAI tags alongside existing tags, providing a quick summary of which categories and behaviors were present in the call. Since this brought the total to four tag types, a Tag Type column was added to keep them distinguishable at a glance. A "Show only real-time alerts" switch was also added, letting reviewers filter down to just the cues the agent was actually alerted to in the moment — all BAI cues, plus the subset of CAI cues that also triggered a real-time alert.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Cogito%20integration/Cogito%20integration%20-%20Tags%20tab.png"
+            alt="Tags tab showing Conversation AI and Behavior AI tags for an interaction"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The Tags tab extended to include CAI and BAI data — giving reviewers an at-a-glance summary of which topics and behaviors were detected before diving into the transcription.</figcaption>
+        </figure>
+        <p>
+          The most nuanced work was in the <strong>Transcription tab</strong>, where two very different types of cues needed to coexist without creating visual overload. To prevent that, two checkboxes let users choose whether to show only CAI cues, only BAI cues, or both, and a vertical bar was added for each cue type, letting a user quickly scan and understand which cues a transcript contains.
+        </p>
+        <p>
+          CAI data was handled with inline highlights on the specific words or phrases that triggered each category. The vertical bar alongside the transcript contained icons for each detected category, and hovering over an icon highlighted its related instance.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Cogito%20integration/Cogito%20integration%20-%20Conversation%20AI%20cues%20on%20transcription%20%2B%20player%20filter.png"
+            alt="Conversation AI category highlights shown inline in the call transcription"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Conversation AI highlights in the transcription — specific words and phrases are marked inline at the point where a category was detected, and hovering over a category icon highlights its related instance.</figcaption>
+        </figure>
+        <p>
+          BAI required a different approach entirely: because behavior detection is a temporal event, not a single word, it needed to be expressed on the timeline rather than inline in the text. A three-phase visual language was used — a dashed line showing when the system began detecting a behavior, a triangle marking when the agent was alerted, and the end of the line indicating the behavior was corrected. Together, these three markers tell the full coaching story at a glance. The vertical bar alongside the transcript contained icons for each detected behavior cue type, and hovering over an icon highlighted its related instance.
+        </p>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Cogito%20integration/Cogito%20integration%20-%20Behavior%20AI%20cues%20on%20transcription.png"
+            alt="Behavior AI cues shown on the call transcription"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>With "Show behavior AI cues" enabled, a vertical bar appears alongside the transcript with an icon for every BAI cue that occurred during the call, and hovering over an icon highlights its related instance.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">03</span>
+          <h2>Outcome &amp; Impact</h2>
+        </div>
+        <p>
+As of July 2026, this part of the integration — surfacing CAI and BAI insights within the post-call review screens — is still in development. Once live, quality managers and supervisors will be able to open the interaction list and immediately see which calls have the highest concentration of flagged behaviors or conversation categories, without listening to a single recording first. Within a call, the combined CAI and BAI view will give reviewers a structured picture of what happened: what was said, when a behavior emerged, whether the agent was coached in the moment, and whether they responded. Coaching conversations are expected to become faster and more specific, grounded in data that's already surfaced in the interface rather than discovered through manual review.
+        </p>
+      </div>
+    </section>
+
+    <nav class="cs-project-nav" aria-label="Project navigation">
+      <a href="retention-dashboard.html" class="cs-project-nav__back">
+        <span>Previous project</span>
+        <strong>← Retention Dashboard</strong>
+      </a>
+      <a href="../index.html#work" class="cs-project-nav__next">
+        <span>Back to</span>
+        <strong>All projects →</strong>
+      </a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Ayelet Servi</p>
+      <p class="footer-copy">© <span class="footer-year"></span></p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:ayelet.servi@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/ayelet-servi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

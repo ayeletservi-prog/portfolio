@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Capture Rules — Ayelet Servi" />
+  <title>Capture Rules — Ayelet Servi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F6F6B'/%3E%3Ctext x='16' y='22' font-family='Arial, sans-serif' font-size='15' font-weight='700' fill='%23F9F6F1' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ayelet Servi" />
+  <meta property="og:title" content="Capture Rules — Ayelet Servi" />
+  <meta property="og:description" content="Giving tenant administrators direct, safe control over interaction capture — without relying on Verint services." />
+  <meta property="og:image" content="../images/Capture%20rules/Capture%20rules%20-%20general.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="../index.html" class="nav-logo">Ayelet Servi</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="../index.html#work"    class="nav-link">Selected projects</a></li>
+        <li><a href="../index.html#about"   class="nav-link">About me</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="cs-hero">
+      <div class="container">
+        <a href="../index.html#work" class="back-link">← Back to selected projects</a>
+        <div class="cs-meta-row">
+          <span class="tag">Enterprise Web</span>
+          <span class="tag">Verint</span>
+          <span class="tag">Wizard Design</span>
+        </div>
+        <h1 class="cs-title">Capture Rules</h1>
+        <p class="cs-subtitle">Giving tenant administrators direct, safe control over interaction capture — without relying on Verint services.</p>
+        <div class="cs-overview">
+          <h2 class="cs-overview__heading">Overview</h2>
+          <p class="cs-overview__text">This project gave tenant administrators direct, safe control over interaction capture — designed first and foremost for a new, customer-based Business Rule Administrator role, with view-only or view-plus-limited-edit access for other business users, alongside IT administrators — replacing a support-ticket-driven workflow with a self-service experience. The solution paired a guided configuration wizard with an at-a-glance view of existing rules, eliminating the need for Verint services involvement in routine capture changes.</p>        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <h2>The Problem</h2>
+        <p>
+          Every time a business needed to adjust which interactions were recorded, they had to submit a request to Verint — creating delays, operational costs, and an ongoing dependency on internal support.
+        </p>
+        <p>
+          The business goal was clear: reduce the cost and friction of managing capture rules by giving tenant administrators direct, safe control — without requiring Verint involvement for routine changes.
+        </p>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">01</span>
+          <h2>Understanding the Needs</h2>
+        </div>
+        <p>
+          Working from a detailed requirements spec and clarifying questions with the PM, I mapped the two distinct needs that the product had to serve: configuring new rules, and quickly understanding existing rules, including what each one does, its conditions, and its current status.
+        </p>
+        <p>I identified four core requirements</p>
+        <ul class="cs-insights">
+          <li><strong>Selectively capture interactions</strong> — not every call needs to be recorded; users want to capture only what meets specific conditions.</li>
+          <li><strong>Block specific interactions</strong> — administrators need to prevent recording of certain content types or channels based on compliance or business requirements.</li>
+          <li><strong>Understand existing rules</strong> — administrators need a quick, clear view of what rules are currently active for a given org, employee group, or individual employee.</li>
+          <li><strong>Monitor rule performance</strong> — users need to verify rules are triggering as intended, including how many times a rule fired in the last 24 hours and when it last triggered.</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section cs-section--alt">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">02</span>
+          <h2>Ideation &amp; Design</h2>
+        </div>
+        <p>
+          The central design challenge was serving multiple audiences within a single, unified interface: a new, customer-based <strong>Business Rule Administrator</strong> role needing full configuration control, other business users needing safe, limited access, and IT administrators needing oversight. I designed two primary experiences to serve all three.
+        </p>
+        <p>
+          The first — <strong>rule visibility</strong> — gave administrators an instant read on what rules are active, their scope, and their trigger statistics, without needing to enter edit mode. The second — <strong>rule configuration</strong> — guided users through creation via a step-by-step wizard that abstracted away the complexity of the underlying Business Rules engine, with access scoped to each role's permissions.
+        </p>
+        <h3>Rule visibility</h3>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Capture%20rules/Capture%20rules%20-%20general.png"
+            alt="Capture Rules — table view with the General tab open in the details pane"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The rules table with the General tab open in the details pane — giving administrators a quick read on a rule's setup without entering edit mode.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Capture%20rules/Capture%20rule%20-%20conditions%20tab.png"
+            alt="Capture Rule — conditions tab in view mode"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>The conditions tab in view mode — administrators can inspect any existing rule's logic at a glance, without entering edit mode.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Capture%20rules/Capture%20rule%20-%20filters.png"
+            alt="Capture Rule — filters panel"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Filtering active rules by organization, employee group, or employee — enabling administrators to quickly understand what is currently configured.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Capture%20rules/Capture%20rules%20-%20show%20same%20scope%20rules.png"
+            alt="Capture Rules — same scope rules view"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Viewing all rules that share a scope — helping administrators understand how a change might affect related rules.</figcaption>
+        </figure>
+        <h3>Rule configuration</h3>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Capture%20rules/Capture%20rule%20-%20wizard%20-%20rule%20type%20step.png"
+            alt="Capture Rule wizard — rule type step"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Step 1: Choosing the rule type — record or block. Starting with intent keeps the rest of the flow focused.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Capture%20rules/Capture%20rule%20-%20wizard%20-%20conditions%20step.png"
+            alt="Capture Rule wizard — conditions step"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Step 2: Defining conditions using standard attributes and operators — powerful enough for complex rules.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Capture%20rules/Capture%20rule%20-%20wizard%20-%20scope%20step.png"
+            alt="Capture Rule wizard — scope step"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Step 3: Scoping the rule to an organization, employee group, or individual employee.</figcaption>
+        </figure>
+        <figure class="cs-image-block reveal">
+          <img
+            src="../images/Capture%20rules/Capture%20rule%20-%20wizard%20-%20review%20step.png"
+            alt="Capture Rule wizard — review step"
+            width="1000"
+            height="560"
+            loading="lazy"
+          />
+          <figcaption>Step 4: A full review before saving — reducing configuration errors and giving administrators confidence before committing changes.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-container">
+        <div class="cs-section-header">
+          <span class="section-label">03</span>
+          <h2>Outcome &amp; Impact</h2>
+        </div>
+        <p>
+          The solution removed the need for Verint services involvement in routine rule changes, reducing support costs and giving customers genuine operational independence. Business Rule Administrators, other business users, and IT administrators could now self-serve their most common capture management tasks directly through the interface.
+        </p>
+      </div>
+    </section>
+
+    <nav class="cs-project-nav" aria-label="Project navigation">
+      <a href="compliance-app.html" class="cs-project-nav__back">
+        <span>Previous project</span>
+        <strong>← Compliance App</strong>
+      </a>
+      <a href="retention-dashboard.html" class="cs-project-nav__next">
+        <span>Next project</span>
+        <strong>Retention Dashboard →</strong>
+      </a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Ayelet Servi</p>
+      <p class="footer-copy">© <span class="footer-year"></span></p>
+      <ul class="footer-links" role="list">
+        <li><a href="mailto:ayelet.servi@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/ayelet-servi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
