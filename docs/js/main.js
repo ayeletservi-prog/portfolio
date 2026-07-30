@@ -9,6 +9,11 @@ const navSections = [...document.querySelectorAll('section[id]')];
 const lastNavLink  = document.getElementById('contact') ? navLinks[navLinks.length - 1] : null;
 
 function updateActiveNavLink() {
+  // Pages with no in-page sections to spy on (e.g. project case-study pages)
+  // have no scroll-driven active state — leave whichever link was marked
+  // "active" in the page's own HTML alone instead of clearing it.
+  if (navSections.length === 0) return;
+
   // Which section currently sits under a fixed line just below the nav bar —
   // geometric, so it's correct regardless of viewport height or section length
   // (a percentage-based band breaks down whenever a section is short relative
