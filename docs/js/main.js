@@ -88,6 +88,19 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// Safety net: fonts/images can settle layout after the observer's first check,
+// which can leave an already-on-screen element (e.g. the first project card)
+// stuck invisible until a scroll event gives the observer another look.
+window.addEventListener('load', () => {
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+      revealObserver.unobserve(el);
+    }
+  });
+});
+
 
 /* ============================================================
    FOOTER YEAR
