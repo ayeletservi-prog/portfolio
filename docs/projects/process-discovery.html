@@ -55,7 +55,7 @@
             <p class="cs-subtitle">Designed an AI-powered experience that automatically discovers business processes, recommends improvements, and enables ongoing monitoring of confirmed processes.</p>
             <div class="cs-overview">
               <h2 class="cs-overview__heading">Overview</h2>
-              <p class="cs-overview__text">This project turned passive desktop observation into a trustworthy map of how work actually happens, giving analysts a human review layer to validate AI-discovered processes before they drive downstream decisions — from surfacing variants for review, to recommending optimized workflows, to ongoing monitoring of confirmed processes as they evolve.</p>
+              <p class="cs-overview__text">This project turned passive desktop observation into a trustworthy map of how work actually happens. Because automated detection is inherently noisy, the core of the design was a human review layer — giving analysts the tools to validate AI-discovered processes and their variants before any of it was trusted to drive downstream decisions.</p>
             </div>
           </div>
           <div class="cs-hero__image">
@@ -187,7 +187,7 @@
           <figcaption>The ground truth behind every process and variant: a log of the individual observations the bot used to detect it. This tab lets users check for observations with extreme values, and from it they can dive into any observation to understand exactly what happened there.</figcaption>
         </figure>
         <p>
-          A user can confirm a process, or flag it — flagging sends it to the Flagged Processes table, where the services team takes the handling from there. The same principle applies to variants, which can be flagged the same way. I originally wanted users to be able to close these loops themselves — for example, reassigning a variant that actually belonged to a different process, or marking one as not real so the bot could continue from there — but that wasn't technically feasible in the MVP's first phase, so we went with the simpler flagging flow instead.
+          A user can confirm a process, or flag it — flagging sends it to the Flagged Processes table, where the services team takes the handling from there. The same principle applies to variants, which can be flagged the same way. I originally wanted users to be able to resolve these situations directly — for example, reassigning a variant that actually belonged to a different process, or marking one as not real so the bot could continue from there — but that wasn't technically feasible in the MVP's first phase, so I went with the simpler flagging flow instead.
         </p>
         <figure class="cs-image-block reveal">
           <img
@@ -210,7 +210,7 @@
           <figcaption>Processes and variants an analyst has flagged, with their reason, sent to a dedicated queue for the services team to action.</figcaption>
         </figure>
         <p>
-          Once a process is confirmed, it moves to the Confirmed Processes table, where its page gains two more tabs, turning it from a one-time triage screen into an ongoing monitoring tool: a Dashboard, and an AI variants optimization tab that proposes improved versions of specific variants as a current-vs-optimized comparison, with plain-language reasoning the analyst can accept or reject. New suggestions surface proactively as a notification, rather than requiring anyone to go looking for them.
+          Once a process is confirmed, it moves to the Confirmed Processes table, where its page gains two more tabs, turning it from a one-time triage screen into an ongoing monitoring tool: a Dashboard, and an AI variants optimization tab. The optimization tab proposes improved versions of specific variants as a current-vs-optimized comparison, with plain-language reasoning the analyst can accept or reject — and new suggestions surface proactively as a notification, rather than requiring anyone to go looking for them.
         </p>
         <figure class="cs-image-block reveal">
           <img
@@ -222,9 +222,6 @@
           />
           <figcaption>Confirmed processes continue to accumulate data over time rather than being a one-time snapshot.</figcaption>
         </figure>
-        <p>
-          Confirmed processes don't stop accumulating data once they're confirmed — they keep gathering observations and surfacing new optimization opportunities over time, so the system gets more useful the longer it runs rather than going stale the way a one-time process-mapping exercise would.
-        </p>
         <figure class="cs-image-block reveal">
           <img
             src="../images/Process%20discovery/Confirmed%20tasks%20-%20Dashboard.png"

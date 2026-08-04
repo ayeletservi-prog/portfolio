@@ -55,7 +55,7 @@
             <p class="cs-subtitle">Modernizing a compliance review platform and introducing AI-powered risk detection — so compliance teams could go from sampling a fraction of calls to reviewing what actually matters.</p>
             <div class="cs-overview">
               <h2 class="cs-overview__heading">Overview</h2>
-              <p class="cs-overview__text">This project modernized a seven-year-old compliance review platform — as close to Verint's LUX design system as the existing technical infrastructure allowed — and introduced AI-powered risk detection, letting compliance teams move from manually sampling a fraction of calls to systematically reviewing what actually matters, across three distinct personas: IT administrators, Compliance Officers, and Wealth Management Supervisors.</p>
+              <p class="cs-overview__text">This project balanced two parallel efforts: a UI modernization that brought the experience closer to Verint's evolving design system within real technical constraints, and the design of an entirely new AI-powered risk detection capability — built to serve three distinct personas, from IT administrators and Compliance Officers to Wealth Management Supervisors, each with a different relationship to the product.</p>
             </div>
           </div>
           <div class="cs-hero__image">
@@ -86,7 +86,7 @@
           <h2>Understanding the Needs</h2>
         </div>
         <p>
-          The starting point was auditing the existing product — a UI that had been substantially unchanged for nearly seven years. Dense waveforms, utilitarian tables, and analytics panels bolted on over time made even core tasks, like reviewing a call's participants or adding a marker, feel more effortful than they needed to be.
+          The starting point was auditing the existing product. Dense waveforms, utilitarian tables, and analytics panels bolted on over time made even core tasks, like reviewing a call's participants or adding a marker, feel more effortful than they needed to be.
         </p>
         <figure class="cs-image-block reveal">
           <img
@@ -155,7 +155,7 @@
           <figcaption>The redesigned Conversation view, with key metadata surfaced up top and secondary information reorganized into clearly structured tabs.</figcaption>
         </figure>
         <p>
-          An AI Summary tab was also added, summarizing the transcription for the user. This lets a reviewer understand what happened faster, without having to listen to the entire interaction or read its transcription.
+          An AI Summary tab was also added, giving reviewers a plain-language summary of the call generated directly from its transcription.
         </p>
         <figure class="cs-image-block reveal">
           <img
@@ -181,7 +181,7 @@
           <figcaption>AI-generated risk markers placed on the call timeline, with the full detail behind each one available in the AI Markers tab — allowing reviewers to navigate directly to flagged moments rather than listening to the full recording.</figcaption>
         </figure>
         <p>
-          A few more things were added to help the user. A dedicated Review tab was added to the interaction page, letting officers add their own comments as well as their own risk markers, without navigating away.
+          A dedicated Review tab was added to the interaction page, letting officers add their own comments and risk markers without navigating away from the call.
         </p>
         <figure class="cs-image-block reveal">
           <img
@@ -204,7 +204,7 @@
             height="560"
             loading="lazy"
           />
-          <figcaption>The Participants view.</figcaption>
+          <figcaption>The Participants tab, giving compliance officers a full list of everyone on the call at a glance.</figcaption>
         </figure>
         <p>
           Participant join and leave events are shown directly on the call timeline, giving compliance officers a clear picture of who was present at any given moment in the recording.
@@ -217,7 +217,7 @@
             height="560"
             loading="lazy"
           />
-          <figcaption>Join and leave indicators shown on hover.</figcaption>
+          <figcaption>Hovering an indicator on the timeline shows exactly when a participant joined or left the call.</figcaption>
         </figure>
         <figure class="cs-image-block reveal">
           <img
@@ -227,10 +227,10 @@
             height="560"
             loading="lazy"
           />
-          <figcaption>Clicking an indicator reveals further detail.</figcaption>
+          <figcaption>Clicking an indicator pins the detail in place for a closer look.</figcaption>
         </figure>
         <p>
-          The search grid also received a visual refresh, though not through new screens: I provided UX guidance directly on the existing screens, and a UI designer translated that into direct guidance for developers — so that work isn't shown here.
+          The search grid also received a visual refresh, though not through new screens: I provided UX direction directly on the existing screens, and a UI designer translated that into detailed specs for developers — so that work isn't shown here.
         </p>
       </div>
     </section>
