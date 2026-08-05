@@ -55,7 +55,7 @@
             <p class="cs-subtitle">Modernizing a compliance review platform and introducing AI-powered risk detection — so compliance teams could go from sampling a fraction of calls to reviewing what actually matters.</p>
             <div class="cs-overview">
               <h2 class="cs-overview__heading">Overview</h2>
-              <p class="cs-overview__text">This project modernized a seven-year-old compliance review platform — as close to Verint's LUX design system as the existing technical infrastructure allowed — and introduced AI-powered risk detection, letting compliance teams move from manually sampling a fraction of calls to systematically reviewing what actually matters, across three distinct personas: IT administrators, Compliance Officers, and Wealth Management Supervisors.</p>
+              <p class="cs-overview__text">This project modernized a compliance review platform — as close to Verint's LUX design system as the existing technical infrastructure allowed — and introduced AI-powered risk detection, letting compliance teams move from manually sampling a fraction of calls to systematically reviewing what actually matters, across three distinct personas: IT administrators, Compliance Officers, and Wealth Management Supervisors.</p>
             </div>
           </div>
           <div class="cs-hero__image">
@@ -69,10 +69,10 @@
       <div class="cs-container">
         <h2>The Problem</h2>
         <p>
-          The Compliance App had been running on the same UX foundation for nearly seven years. The interface had grown difficult to navigate, and the visual design was out of step with Verint's evolving LUX design system. At the same time, the product was preparing to launch a significant new capability: AI-powered risk detection (VFC Bots) that would automatically flag compliance risks in call recordings.
+          The Compliance App had been running on the same UX foundation for nearly seven years. The interface had grown difficult to navigate, and the visual design was out of step with Verint's evolving LUX design system. At the same time, the product was preparing to launch significant new AI capabilities: risk detection that would automatically flag compliance risks in call recordings, and a transcription summary that gave reviewers a plain-language recap of each call.
         </p>
         <p>
-          The work split into two parallel streams. The first was a focused UI refresh. The existing technical infrastructure ruled out a full migration to Verint's new LUX design system, so the work focused on bringing the experience as close to a LUX look and feel as possible, while resolving accumulated usability debt. The second was a new design challenge: surfacing AI-generated risk signals in a way that compliance reviewers could act on quickly, without overwhelming them or undermining their trust in the AI.
+          The work split into two parallel streams. The first combined a visual refresh with real UX improvements: the existing technical infrastructure ruled out a full migration to Verint's new LUX design system, so the work focused on bringing the experience as close to a LUX look and feel as possible, while also resolving usability problems that had built up over the years. The second was a new design challenge: surfacing AI-generated risk signals in a way that compliance reviewers could act on quickly, without overwhelming them or undermining their trust in the AI.
         </p>
       </div>
     </section>
@@ -86,7 +86,7 @@
           <h2>Understanding the Needs</h2>
         </div>
         <p>
-          The starting point was auditing the existing product. Dense waveforms, utilitarian tables, and analytics panels bolted on over time made even core tasks, like reviewing a call's participants or adding a marker, feel more effortful than they needed to be.
+          The starting point was auditing the existing product. The entire experience felt like a series of bolted-on additions — utilitarian tables and analytics panels layered on over the years — making even core tasks, like reviewing a call's participants or adding a marker, feel more effortful than they needed to be.
         </p>
         <figure class="cs-image-block reveal">
           <img
@@ -112,16 +112,16 @@
           Three distinct user personas shaped the design, each with fundamentally different relationships to the product:
         </p>
         <ul class="cs-insights">
-          <li><strong>IT administrators</strong> — responsible for locating specific call recordings, often spending hours searching before they could hand a call off to the compliance team. Search and filtering were their primary pain point.</li>
-          <li><strong>Compliance Officers</strong> — a largely untapped user base who rarely logged into VFC at all, relying on IT to export calls for them instead. A core goal was to give them enough reason to log in directly and engage with the product regularly — getting up to speed quickly, listening to the relevant section of a recording, annotating their findings, and moving on, without context-switching to other tools.</li>
-          <li><strong>Wealth Management Supervisors</strong> — had historically relied on manual sampling: pulling a small number of calls into Excel spreadsheets each week and reviewing them by hand. The AI integration was a direct replacement for this workflow, and the design had to earn their trust in the system's triage decisions.</li>
+          <li><strong>IT administrators.</strong> They're responsible for locating specific call recordings, often spending hours searching before they could hand a call off to the compliance team. Search and filtering were their primary pain point.</li>
+          <li><strong>Compliance Officers.</strong> A largely untapped user base who rarely logged into the system at all, relying on IT to export calls for them instead. A core goal was to give them enough reason to log in directly and engage with the product regularly: getting up to speed quickly, listening to the relevant section of a recording, annotating their findings, and moving on, without context-switching to other tools.</li>
+          <li><strong>Wealth Management Supervisors.</strong> They had historically relied on manual sampling: pulling a small number of calls into Excel spreadsheets each week and reviewing them by hand. The AI integration was a direct replacement for this workflow, and the design had to earn their trust in the system's triage decisions.</li>
         </ul>
         <p style="margin-top: 2rem;">
           Two specific pain points emerged from the audit:
         </p>
         <ul class="cs-insights">
-          <li><strong>Buried orientation data</strong> — the key questions a reviewer needs answered the moment they open a call — who was on it, what type of interaction it was, was it flagged for risk, when it occurred, and how it was handled — were scattered across tabs and pop-ups. Getting a basic picture required multiple clicks before review could even begin.</li>
-          <li><strong>No AI assistance anywhere in the system</strong> — neither the search grid nor the interaction page had any intelligence layer. Reviewers had no way to identify high-risk moments without listening to the full recording.</li>
+          <li><strong>Buried orientation data.</strong> The key questions a reviewer needs answered the moment they open a call (who was on it, what type of interaction it was, was it flagged for risk, when it occurred, and how it was handled) were scattered across tabs and pop-ups. Getting a basic picture required multiple clicks before review could even begin.</li>
+          <li><strong>No AI assistance anywhere in the system.</strong> Neither the search grid nor the interaction page had any intelligence layer. Reviewers had no way to identify high-risk moments without listening to the full recording.</li>
         </ul>
         <div class="cs-challenge">
           <span class="cs-challenge__label">The design challenge</span>
@@ -142,7 +142,7 @@
           This LUX-inspired refresh tackled interaction patterns, component consistency, and visual hierarchy across the existing screens, within the limits of what the underlying technical infrastructure could support. The two core usability problems required more deliberate solutions.
         </p>
         <p>
-          The first priority was immediate orientation. The redesigned interaction page surfaces key metadata the moment it opens — date, time, duration, user, source and destination numbers, and platform — shown as labeled icons across the top of the screen and readable before pressing play. Associated labels and case links appear just below. Information that had been scattered across the page was reorganized into clearly structured tabs, with the tabs themselves repositioned and reordered for a more logical flow. A prominent "Has Risk" indicator at the top of the interaction page gives reviewers an immediate signal before the recording starts.
+          The first priority was immediate orientation. The redesigned interaction page surfaces key metadata the moment it opens — date, time, duration, user, source and destination numbers, and platform — shown as labeled icons across the top of the screen and readable before pressing play. Associated labels and cases appear just below. Information that had been scattered across the page was reorganized into clearly structured tabs, with the tabs themselves repositioned and reordered for a more logical flow. A prominent "Has Risk" indicator at the top of the interaction page gives reviewers an immediate signal before the recording starts.
         </p>
         <figure class="cs-image-block reveal">
           <img
@@ -168,7 +168,7 @@
           <figcaption>The AI Summary tab — giving reviewers a quick understanding of what happened on a call without listening to the full recording or reading the transcript.</figcaption>
         </figure>
         <p>
-          Another use of AI was in automating risk markers. In the legacy system, markers on the call timeline had to be placed manually by the compliance officer while reviewing a call. In the new design, the AI does this automatically: a dedicated AI Markers tab lists every risk marker the AI detected, including the specific content that triggered it — a transcript excerpt, a detected topic, a flagged phrase. These markers are also shown directly on the call timeline, letting compliance officers see the density and location of flagged moments at a glance without any manual work.
+          Another use of AI was in automating risk markers. In the legacy system, markers on the call timeline had to be placed manually by the compliance officer while reviewing a call. In the new design, the AI does this automatically, though officers can still add their own markers manually when needed: a dedicated AI Markers tab lists every risk marker the AI detected, including the specific content that triggered it — a transcript excerpt, a detected topic, a flagged phrase. These markers are also shown directly on the call timeline, letting compliance officers see the density and location of flagged moments at a glance without any manual work.
         </p>
         <figure class="cs-image-block reveal">
           <img
