@@ -74,6 +74,9 @@
         <p>
           A bot addresses the first half of that problem by passively observing employee desktop activity and detecting recurring sequences of actions. Once a sequence has enough repeated observations for the bot to be confident it represents a genuine process, it's surfaced as a candidate. But automated detection is necessarily noisy: not every candidate is really one coherent process, and not every variant the bot groups under it actually belongs there. The system needed a human review layer an analyst could trust, before any of this data was used to drive decisions or optimizations.
         </p>
+        <p>
+          Even after a process is confirmed, the problem isn't fully solved: sequences drift over time, and a process that was accurate six months ago can quietly go stale again. Analysts needed a way to keep monitoring confirmed processes on an ongoing basis — not just validate them once and move on.
+        </p>
       </div>
     </section>
 
@@ -187,7 +190,7 @@
           <figcaption>The ground truth behind every process and variant: a log of the individual observations the bot used to detect it. This tab lets users check for observations with extreme values, and from it they can dive into any observation to understand exactly what happened there.</figcaption>
         </figure>
         <p>
-          A user can confirm a process, or flag it — flagging sends it to the Flagged Processes table, where the services team takes the handling from there. The same principle applies to variants, which can be flagged the same way. I originally wanted users to be able to resolve these situations directly — for example, reassigning a variant that actually belonged to a different process, or marking one as not real so the bot could continue from there — but that wasn't technically feasible in the MVP's first phase, so I went with the simpler flagging flow instead.
+          A user can confirm a process, or flag it — flagging sends it to the Flagged Processes table, where the services team takes the handling from there. The same principle applies to variants, which can be flagged the same way. I originally wanted users to be able to resolve these situations directly — for example, reassigning a variant that actually belonged to a different process, or removing a process that they marked as not real — but that wasn't technically feasible in the MVP's first phase, so I went with the simpler flagging flow instead.
         </p>
         <figure class="cs-image-block reveal">
           <img
@@ -210,7 +213,7 @@
           <figcaption>Processes and variants an analyst has flagged, with their reason, sent to a dedicated queue for the services team to action.</figcaption>
         </figure>
         <p>
-          Once a process is confirmed, it moves to the Confirmed Processes table, where its page gains two more tabs, turning it from a one-time triage screen into an ongoing monitoring tool: a Dashboard, and an AI variants optimization tab. The optimization tab proposes improved versions of specific variants as a current-vs-optimized comparison, with plain-language reasoning the analyst can accept or reject — and new suggestions surface proactively as a notification, rather than requiring anyone to go looking for them.
+          Once a process is confirmed, it moves to the Confirmed Processes table, where its focus shifts from one-time triage to ongoing monitoring, supported by two new tabs: a Dashboard, and an AI variants optimization tab. The optimization tab proposes improved versions of specific variants as a current-vs-optimized comparison, with plain-language reasoning the analyst can accept or reject — and new suggestions surface proactively as a notification, rather than requiring anyone to go looking for them.
         </p>
         <figure class="cs-image-block reveal">
           <img
