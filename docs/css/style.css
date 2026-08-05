@@ -451,7 +451,7 @@ a { color: inherit; text-decoration: none; }
 }
 .skills-group li {
   font-size: 0.92rem;
-  color: var(--text-muted);
+  color: #515B63;
   padding-left: 1rem;
   position: relative;
 }
@@ -484,7 +484,7 @@ a { color: inherit; text-decoration: none; }
 
 .contact-intro {
   font-size: 1rem;
-  color: var(--text-muted);
+  color: #515B63;
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -501,7 +501,7 @@ a { color: inherit; text-decoration: none; }
   gap: 0.75rem;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: #515B63;
   transition: color 0.2s;
 }
 .contact-link:hover    { color: var(--accent); }
